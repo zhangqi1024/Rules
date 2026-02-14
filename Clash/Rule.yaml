@@ -3,25 +3,18 @@
   - RULE-SET,Special,DIRECT
 
   - RULE-SET,Netflix,Netflix
-  - RULE-SET,Disney Plus,Disney
+  - RULE-SET,Disney Plus,Disney Plus
   - RULE-SET,YouTube,YouTube
 #   - RULE-SET,YouTube Music,YouTube
   - RULE-SET,Max,Max
   - RULE-SET,Spotify,Spotify
 
-  - RULE-SET,Bilibili,CN Mainland TV
-  - RULE-SET,IQ,CN Mainland TV
-  - RULE-SET,IQIYI,CN Mainland TV
-  - RULE-SET,Letv,CN Mainland TV
-  - RULE-SET,Netease Music,CN Mainland TV
-  - RULE-SET,Tencent Video,CN Mainland TV
-  - RULE-SET,WeTV,CN Mainland TV
-  - RULE-SET,Youku,CN Mainland TV
-
   - RULE-SET,Abema TV,Asian TV
   - RULE-SET,Bahamut,Asian TV
+  - RULE-SET,DMM,Asian TV
   - RULE-SET,Fox+,Asian TV
   - RULE-SET,Hulu Japan,Asian TV
+  - RULE-SET,IQ,Asian TV
   - RULE-SET,Japonx,Asian TV
   - RULE-SET,JOOX,Asian TV
   - RULE-SET,KKBOX,Asian TV
@@ -46,11 +39,13 @@
   - RULE-SET,Pornhub,Global TV
   - RULE-SET,Soundcloud,Global TV
 
-  - RULE-SET,Apple Music,Apple TV
-  - RULE-SET,Apple News,Apple TV
-  - RULE-SET,Apple TV,Apple TV
-
-  - RULE-SET,Apple,Apple
+  - RULE-SET,Bilibili,CN Mainland TV
+  - RULE-SET,IQIYI,CN Mainland TV
+  - RULE-SET,Letv,CN Mainland TV
+  - RULE-SET,Netease Music,CN Mainland TV
+  - RULE-SET,Tencent Video,CN Mainland TV
+  - RULE-SET,WeTV,CN Mainland TV
+  - RULE-SET,Youku,CN Mainland TV
 
   - RULE-SET,Telegram,Telegram
 
@@ -63,6 +58,13 @@
   - RULE-SET,Scholar,Scholar
   - RULE-SET,Speedtest,Speedtest
   - RULE-SET,Steam,Steam
+  - RULE-SET,TikTok,TikTok
+
+  - RULE-SET,Apple Music,Apple TV
+  - RULE-SET,Apple News,Apple TV
+  - RULE-SET,Apple TV,Apple TV
+
+  - RULE-SET,Apple,Apple
 
   - RULE-SET,miHoYo,miHoYo
 
@@ -83,22 +85,16 @@ script:
             'HTTPDNS': 'HTTPDNS',
             'Special': 'DIRECT',
             'Netflix': 'Netflix',
-            'Disney Plus': 'Disney',
+            'Disney Plus': 'Disney Plus',
             'YouTube': 'YouTube',
             'Max': 'Max',
             'Spotify': 'Spotify',
-            'Bilibili': 'CN Mainland TV',
-            'IQ': 'CN Mainland TV',
-            'IQIYI': 'CN Mainland TV',
-            'Letv': 'CN Mainland TV',
-            'Netease Music': 'CN Mainland TV',
-            'Tencent Video': 'CN Mainland TV',
-            'Youku': 'CN Mainland TV',
-            'WeTV': 'CN Mainland TV',
             'Abema TV': 'Asian TV',
             'Bahamut': 'Asian TV',
+            'DMM': 'Asian TV',
             'Fox+': 'Asian TV',
             'Hulu Japan': 'Asian TV',
+            'IQ': 'Asian TV',
             'Japonx': 'Asian TV',
             'JOOX': 'Asian TV',
             'KKBOX': 'Asian TV',
@@ -120,6 +116,13 @@ script:
             'PBS': 'Global TV',
             'Pornhub': 'Global TV',
             'Soundcloud': 'Global TV',
+            'Bilibili': 'CN Mainland TV',
+            'IQIYI': 'CN Mainland TV',
+            'Letv': 'CN Mainland TV',
+            'Netease Music': 'CN Mainland TV',
+            'Tencent Video': 'CN Mainland TV',
+            'Youku': 'CN Mainland TV',
+            'WeTV': 'CN Mainland TV',
             'Apple Music': 'Apple TV',
             'Apple News': 'Apple TV',
             'Apple TV': 'Apple TV',
@@ -134,6 +137,7 @@ script:
             'Scholar': 'Scholar',
             'Speedtest': 'Speedtest',
             'Steam': 'Steam',
+            'TikTok': 'TikTok',
             'miHoYo': 'miHoYo',
             'PROXY': 'Proxy',
             'Domestic': 'Domestic',
@@ -361,6 +365,12 @@ rule-providers:
     url: 'https://testingcf.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Disney%20Plus.yaml'
     path: ./Rules/Media/Disney_Plus
     interval: 86400
+  DMM:
+    type: http
+    behavior: classical
+    url: 'https://testingcf.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/DMM.yaml'
+    path: ./Rules/Media/DMM
+    interval: 86400
   encoreTVB:
     type: http
     behavior: classical
@@ -492,6 +502,12 @@ rule-providers:
     behavior: classical
     url: 'https://testingcf.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Steam.yaml'
     path: ./Rules/Steam
+    interval: 86400
+  TikTok:
+    type: http
+    behavior: classical
+    url: 'https://testingcf.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/TikTok.yaml'
+    path: ./Rules/TikTok
     interval: 86400
   Speedtest:
     type: http
